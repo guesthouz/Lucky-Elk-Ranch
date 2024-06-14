@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+    margin: 0;
+}
+
+/** PROPERTY SEARCH **/
+
+.card {
+    border:solid 1px rgb(214, 214, 214);
+    padding:20px;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+.mapcard {
+    box-shadow: none;
+}
+
+.property-image {
+    border-radius: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .99;
+    color: white;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .50;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li {
+    margin: 0 0px;
+}
+
+.slick-next:before {
+    display: none !important;
+}
+
+.slick-prev:before {
+    display: none !important;
+}
+
+.gm-style iframe + div { border:none!important; }
+
+.mapboxgl-popup-content {
+    padding: 0 !important;
+}
+
+.type-label {
+    background-color: #172b2f; /* change this to match theme primary colors */
+    display: inline;
+    padding: 5px 8px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.type-label.map-label {
+    background-color: #172b2f; /* change this to match theme primary colors */
+    display: inline;
+    padding: 3px 5px;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 5px;
+}
