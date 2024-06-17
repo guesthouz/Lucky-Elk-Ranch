@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropertySearch from '@/app/components/PropertySearch';
 import Navigation from '@/app/components/Navigation';
 import '../styles/globals.css';
@@ -28,31 +28,24 @@ const styles = {
 };
 
 const Results = () => {
+  const [filteredProperties, setFilteredProperties] = useState([]);
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   const firebaseUid = process.env.NEXT_PUBLIC_FIREBASE_UID;
 
   return (
     <>
-      <Navigation
-        apiUrl={apiUrl}
-        firebaseUid={firebaseUid}
-      />
-      <PropertySearch
-        apiUrl={apiUrl}
-        firebaseUid={firebaseUid}
-      />
+      <Navigation apiUrl={apiUrl} firebaseUid={firebaseUid} />
+      <PropertySearch apiUrl={apiUrl} firebaseUid={firebaseUid} />
       <div style={styles.gridContainer}>
         <div>
           <Properties
             apiUrl={apiUrl}
             firebaseUid={firebaseUid}
+            onFilteredProperties={setFilteredProperties}
           />
         </div>
         <div style={styles.rightColumn}>
-          <Map
-            apiUrl={apiUrl}
-            firebaseUid={firebaseUid}
-          />
+          <Map properties={filteredProperties} apiUrl={apiUrl} firebaseUid={firebaseUid} />
         </div>
       </div>
     </>
